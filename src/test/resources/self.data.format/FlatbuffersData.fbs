@@ -1,0 +1,40 @@
+namespace self.data.format.flatbuffers;
+
+enum Type : byte {
+  PING=1,
+  PONG=2,
+  UPLOAD=3,
+  RSP_UPLOAD=4,
+  SIGNUP=5,
+  RSP_SIGNUP=6,
+  SIGNIN=7,
+  RSP_SIGNIN=8
+}
+
+enum State : byte {
+  ERROR=-1,
+  SUCCESS=1
+}
+
+enum Sensor : byte {
+  ACCELERATION=1,
+  MAGNETISM=2
+}
+
+table SensorData{
+  timestamp: [long];
+  x: [double];
+  y: [double];
+  z: [double];
+  sensor: Sensor = ACCELERATION;
+}
+
+table FlatbuffersData {
+  type: Type = PING;
+  state: State = SUCCESS;
+  timestamp : long;
+  uid: string;
+  list: [SensorData];
+}
+
+root_type FlatbuffersData;

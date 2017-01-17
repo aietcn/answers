@@ -1,0 +1,39 @@
+package self.data.format;
+
+message ProtobufData {
+  enum Type {
+    PING = 1;
+    PONG = 2;
+    UPLOAD = 3;
+    RSP_UPLOAD = 4;
+    SIGNUP = 5;
+    RSP_SIGNUP = 6;
+    SIGNIN = 7;
+    RSP_SIGNIN = 8;
+  }
+
+  enum State {
+    SUCCESS = 1;
+    ERROR = -1;
+  }
+
+  enum Sensor {
+    ACCELERATION = 1;
+    MAGNETISM = 2;
+  }
+
+  message SensorData {
+    required Sensor sensor = 1;
+    repeated int64 timestamp = 2;
+    repeated double x = 3;
+    repeated double y = 4;
+    repeated double z = 5;
+  }
+
+  required Type type = 1;
+  required int64 timestamp = 3;
+  optional State state = 2;
+  optional string uid = 4;
+  repeated SensorData list = 5;
+
+}
