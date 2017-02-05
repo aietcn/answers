@@ -147,7 +147,7 @@ public class FlatbuffersTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime > 1700 && avgtime < 1800);
+    assertTrue(avgtime > 1700 && avgtime < 1850);
   }
 
   @Test
@@ -184,7 +184,7 @@ public class FlatbuffersTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>43&&avgtime<45);
+    assertTrue(avgtime>35&&avgtime<45);
   }
 
   @Test
@@ -221,7 +221,7 @@ public class FlatbuffersTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>75&&avgtime<85);
+    assertTrue(avgtime>65&&avgtime<85);
   }
 
   private byte[] largeData(){
@@ -311,7 +311,7 @@ public class FlatbuffersTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime > 2400 && avgtime < 2500); //2450
+    assertTrue(avgtime > 2300 && avgtime < 2500); //2450
   }
 
   @Test
@@ -381,7 +381,7 @@ public class FlatbuffersTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>43&&avgtime<45); //44
+    assertTrue(avgtime>40&&avgtime<50); //44
   }
 
   @Test
@@ -403,7 +403,7 @@ public class FlatbuffersTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>75&&avgtime<80); //76
+    assertTrue(avgtime>65&&avgtime<80); //76
   }
 
 }

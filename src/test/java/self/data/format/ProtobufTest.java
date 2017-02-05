@@ -62,7 +62,7 @@ public class ProtobufTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime > 470 && avgtime < 480);
+    assertTrue(avgtime > 440 && avgtime < 490);
   }
 
   @Test
@@ -92,7 +92,7 @@ public class ProtobufTest {
       if (j > 300) avgs.add(avg);
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
-    assertTrue(avgtime > 560 && avgtime < 570);
+    assertTrue(avgtime > 560 && avgtime < 590);
   }
 
   @Test
@@ -123,7 +123,7 @@ public class ProtobufTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>380&&avgtime<390);
+    assertTrue(avgtime>370&&avgtime<400);
   }
 
   @Test
@@ -154,7 +154,7 @@ public class ProtobufTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>390&&avgtime<400);
+    assertTrue(avgtime>390&&avgtime<420);
   }
 
   private ProtobufData largeData(){

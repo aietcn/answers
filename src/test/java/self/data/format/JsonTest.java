@@ -61,7 +61,7 @@ public class JsonTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>1100&&avgtime<1300);
+    assertTrue(avgtime>1100&&avgtime<1500);
   }
 
   @Test
@@ -91,7 +91,7 @@ public class JsonTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>1450&&avgtime<1520);
+    assertTrue(avgtime>1450&&avgtime<1600);
   }
 
   @Test
@@ -182,7 +182,7 @@ public class JsonTest {
     }
     double avgtime = avgs.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     System.out.println(avgtime);
-    assertTrue(avgtime>9000&&avgtime<9300); //9150
+    assertTrue(avgtime>9000&&avgtime<9400); //9150
   }
 
   @Test
